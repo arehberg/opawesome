@@ -1,0 +1,33 @@
+<h1><%= @test.name %></h1>
+<p><%= link_to "Edit test and options", edit_opawesome_test_path(@test), class: 'btn' %></p>
+
+<h2>Test options</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Selection Count</th>
+      <th>Conversion Count</th>
+      <th>Conversion Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @test_options.each do |option| %>
+      <% if @test.best_option == option %>
+        <tr>
+          <td><strong><%= option.value %></strong></td>
+          <td><strong><%= option.selection_count %></strong></td>
+          <td><strong><%= option.conversion_count %></strong></td>
+          <td><strong><%= option.conversion_rate.round(2) %>%</strong></td>
+        </tr>
+      <% else %>
+        <tr>
+          <td><%= option.value %></td>
+          <td><%= option.selection_count %></td>
+          <td><%= option.conversion_count %></td>
+          <td><%= option.conversion_rate.round(2) %>%</td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

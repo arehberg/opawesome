@@ -1,0 +1,11 @@
+<h1>Opawesome Tests</h1>
+<p>Viewing all tests</p>
+
+<table cellspacing="3" class="admin_dashboard_table">
+  <% @tests.each do |test| %>
+    <tr>
+      <td><%= link_to test.name, opawesome_test_path(test) %></td>
+      <td><%= link_to "Edit", edit_opawesome_test_path(test) %></td>
+    </tr>
+  <% end %>
+</table>

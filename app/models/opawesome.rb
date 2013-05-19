@@ -1,5 +1,3 @@
-require "opawesome/engine"
-
 module Opawesome
   def self.table_name_prefix
     'opawesome_'

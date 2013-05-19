@@ -1,0 +1,2 @@
+module Opawesome::SessionsHelper
+end
