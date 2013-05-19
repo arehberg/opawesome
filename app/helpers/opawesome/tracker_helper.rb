@@ -34,10 +34,6 @@ module Opawesome::TrackerHelper
     end
   end
 
-  def wtf
-    cookies[:opaw_valid_session].nil?
-  end
-
   def opaw_convert!(key)
     return if cookies[:opaw_ignore]
 
