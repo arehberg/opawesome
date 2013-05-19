@@ -43,7 +43,7 @@ module Opawesome::TrackerHelper
       if option.nil?
         cookies["opaw_#{key}"] = nil
       else
-        option.convert! unless cookies[:opaw_valid_session]
+        option.convert! if cookies[:opaw_valid_session]
       end
     end
   end

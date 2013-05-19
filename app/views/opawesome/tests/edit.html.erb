@@ -1,3 +1,30 @@
 <h1>Edit Test</h1>
 
-<%= render partial: 'form', test: @test %>
+<%= form_for @test, html: {class: 'edit_test'} do |f| %>
+  <div class="input">
+    <%= f.label :name, 'Name' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <h2>Test Options</h2>
+  <p><strong>NOTE:</strong> only edit options to fix typos, if you want to remove an option and add a new one, fully remove the option you want to get rid of and then create a new option. If you don't do this, the conversion stats from the old option will be used.</p>
+  <%= f.fields_for :options do |builder| %>
+    <%= render 'option_fields', f: builder %>
+  <% end %>
+  <%=
+    new_object = Opawesome::TestOption.new
+    id = new_object.object_id
+    fields = f.fields_for(:options, new_object, child_index: id) do |builder|
+      render "option_fields", f: builder
+    end
+    link_to("New Test Option", '#', class: "add_fields btn", data: {id: id, fields: fields.gsub("\n", "")})
+  %>
+
+  <div class="input">
+    <% if @test.new_record? %>
+      <%= f.submit "Create Test", class: 'btn' %>
+    <% else %>
+      <%= f.submit "Update Test", class: 'btn' %>
+    <% end %>
+  </div>
+<% end %>
