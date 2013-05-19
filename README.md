@@ -23,10 +23,16 @@ end
 
 ## Setup
 
-Add this to your gemfile:
+Add this to your gemfile and then bundle install:
 
 ```ruby
 gem 'opawesome', :git => 'git://github.com/arehberg/opawesome.git'
+```
+
+Run this in your shell:
+```bash
+$ rake opawesome_engine:install:migrations
+$ rake db:migrate
 ```
 
 Add this to your application.js:
