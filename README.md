@@ -11,6 +11,7 @@ Multi-armed bandit optimization testing for rails
 ## Things to be aware of
 - Users are not prevented from converting multiple times, it is up to you to make sure that you only call opaw_convert! when you need it called, don't just stick it at the top of a controller action (this does allow you to do things like consider 10 page views as a conversion and let people convert repeatedly to choose test options that encourage engagement if you want)
 - The Opawesome::Tests controller allows administration of optimization tests, but is not locked down by default. The quickest way to fix this is by creating an initializer that contains the following code:
+
 ```ruby
 Opawesome::TestsController.class_eval do
   http_basic_authenticate_with :name => "test", :password => "secret"
