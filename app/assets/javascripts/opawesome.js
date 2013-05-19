@@ -23,7 +23,7 @@ OptimizatonTestForm = {
 OptimizationTracker = {
   create_session: function(){
     if(Cookies('opt_valid_session') === undefined) {
-      $.post('/optimization/sessions', function(data) {
+      $.post('/opawesome/sessions', function(data) {
         // optimization tracking started successfully (we're not doing anything special here yet)
       });
     }
