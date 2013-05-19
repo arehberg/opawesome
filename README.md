@@ -1,6 +1,9 @@
-# Opawesome (oh-pawesome)
+# Opawesome (oh-paw-some)
 
-Multi-armed bandit optimization testing for rails
+Multi-armed bandit optimization testing for rails.
+
+## Intro
+I wasn't able to find any libraries that did exactly what I wanted, there were lots of A/B testing gems, and a few multivariate testing gems that were either outdated or didn't provide all the functionality I wanted. So, I wrote this! It's my first gem and I've already got quite a few things I would like to change/improve, but I wanted to be able to start pulling this in to my apps as a gem, and thought some people might find it useful. Contributions and suggestions are welcome! Enjoy!
 
 ## Rad stuff
 - A little bit of javascript will ping the rails app when someone first visits to confirm they're not a spider
