@@ -43,7 +43,7 @@ Add this to your application.js:
 
 ## Usage
 
-Selecting a test option:
+Selecting a test option (in controllers or views):
   - The test will be automatically created in the database the first time this is called
   - The third field is the default value and will be used to create a test option the first time this is called
   - The :test_tag will be used to track conversions for this test, so remember it
