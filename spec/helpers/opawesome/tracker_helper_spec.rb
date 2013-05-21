@@ -131,6 +131,7 @@ describe Opawesome::TrackerHelper do
         @option = mock_model Opawesome::TestOption, value: 'test_value'
         @cookies.stub(:[]){ nil }
         @cookies.stub(:[]).with('opaw_test_key') { @option.id }
+        @cookies.stub(:[]).with(:opaw_valid_session) { true }
         helper.stub(:cookies) { @cookies }
       end
 
