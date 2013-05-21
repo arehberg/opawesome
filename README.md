@@ -26,7 +26,7 @@ end
 Add this to your gemfile and then bundle install:
 
 ```ruby
-gem 'opawesome', :git => 'git://github.com/arehberg/opawesome.git'
+gem 'opawesome'
 ```
 
 Run this in your shell:
